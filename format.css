@@ -38,6 +38,10 @@
     font: inherit; /* ensures same font as document */
     color: black;
   }
+
+  input::placeholder {
+    color: transparent; /* hides placeholder text */
+  }
   button {
     display: none ; 
   }
