@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <!-- Header -->
+    <head>
+        <link rel="stylesheet" href="format.css">
+    </head>
+    <h1 id = 'note'>Discharge Summary Note</h1>
+    <script src="script.js"></script>
+    <body> 
+        <!-- Basic Info -->
+
+        <div id = "basicinfo">
+            <h3>Client Full Name: <input type="text" id="name" name="name" placeholder = "First Last"></h3>
+            <h3>Date: <input class = "singleline" type="text" id="date" name="date" placeholder="mm/dd/yyyy"></h3>
+        </div>
+    
+        <!-- Diagnosis-->
+        <div id = "diagnosis">
+            <h3>INITIAL DIAGNOSIS: </h3>
+            <input type="text" id="dinput" placeholder="Add Diagnosis">
+            <button onclick = "newElement()" type="button">Add Diagnosis</button>
+
+        </div>
+
+        <ul id = "added"></ul>
+    
+        <div id = "dates">
+            <h3>SERVICES AND TERMINATION STATUS: </h3>
+            <p>OPENING DATE: <input class = "singleline" type="text" id="startdate" name="startdate" placeholder="mm/dd/yyyy"></p>
+            <p>TERMINATION DATE: <input class = "singleline" type="text" id="enddate" name="enddate" placeholder="mm/dd/yyyy"></p>
+            <p>NUMBER OF SESSIONS: <input class = "singleline" type="number" id="sessions" name="sessions" ></p>
+        </div>
+
+        <div>
+            <h3>WHICH OF THE FOLLOWING SERVICES WERE USED? </h3>
+            <!-- Multiple choice fill out -->
+            <ul  id = 'choice' >
+                <li ><input class = "yourmom" type="checkbox">Individual</li>
+                <li><input class = "yourmom" type="checkbox">Group</li>
+                <li ><input class = "yourmom" type="checkbox">Family</li>
+                <li><input class = "yourmom" type="checkbox">Marital</li>
+                <li ><input class = "yourmom" type="checkbox">Psych testing</li>
+                <li><input  class = "yourmom" type="checkbox">Other <input id = "otherbox" type="text"></li>
+            </ul>
+
+        </div>
+
+        <div>
+            <h3>OVERALL STATUS AT TERMINATION: </h3>
+            <select class = "yourmom" name="term" id="term">
+                <option  >Marked Improvement</option>
+                <option >Moderate Improvement</option>
+                <option  >No Change</option>
+                <option >Regressed</option>
+                <option >Unknown</option>
+    
+            </select>
+
+        </div>
+
+        <div>
+            <h3>REASONS FOR TERMINATION</h3>
+            <select class = "yourmom" name="choices" id="choices" onchange = "otheroption()">
+                <option >Discharged As Planned</option>
+                <option>Referred For Other Services</option>
+                <option>No Longer Making Appointments</option>
+                <option value = "other" >Other </option>
+            </select>
+            <span id="other-container"></span> 
+        </div>
+
+
+        <div id ="simplepracticeinfo">
+            <h3>Intake Questionaire</h3>
+            <!-- <p> upload intake file below</p>
+            <input type="file">
+        -->
+            <h3>PRESENTING PROBLEM AND ASSESSMENT:</h3>
+            <!-- this is where we want to import the pdf-->
+            <h4>SUBJECTIVE EVALUATION: </h4>
+            <textarea class = "textarea" type="text" id="probinput" oninput = "autoexpand()" ></textarea>
+            <p id="disclaimer">*drag down bottom right corner of text box to show all text</p>
+            <h4>Client reports: </h4>
+            <textarea class = "textarea" type="text" id="probinput" ></textarea>
+            <h4>Goals: </h4>
+            <textarea class = "textarea" type="text" id="probinput" ></textarea>
+            <h3>MEDICAL/PSYCHIATRIC STATUS: </h3>
+            <textarea class = "textarea" type="text" id="probinput" ></textarea>
+
+        </div>
+
+        <div id = "clientsatisfy">
+            <h3>CLIENT’S STATEMENT REGARDING SATISFACTION OF TREATMENT RENDERED: </h3>
+            <textarea class = "textarea" type="text" id="satisfy" placeholder="Add Client's Comment"></textarea>
+        </div>
+    </body>
+    <p></p>
+    <div id = "buttondiv">
+        <button onclick="window.print()" id = "pdfbutton">Download Page as PDF</button>
+    </div>
+    
+</html>

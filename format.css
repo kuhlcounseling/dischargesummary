@@ -1,0 +1,105 @@
+#choices {
+    list-style-type: none;
+    padding: 0;
+}
+#choice {
+    list-style-type: none;
+    padding: 0;
+}
+#added {
+    list-style-type: none;
+    padding: 0;
+}
+#note {
+  display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+  height: 50px;
+}
+
+#pdfbutton {
+  display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+  height: 5vh;
+}
+
+@media print {
+  @page {
+    margin: 0; /* Removes the margin space where browser headers/footers live */
+  }
+  body {
+    padding: 1.5cm; /* Re-adds padding to the body so your content isn't cut off */
+  }
+  input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    background: transparent;
+    font: inherit; /* ensures same font as document */
+    color: black;
+  }
+  button {
+    display: none ; 
+  }
+
+  textarea {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+
+    resize: none !important;
+    overflow: visible;
+
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+
+}
+
+.textarea {
+      width: 100%;
+      max-width: 1500px;
+      min-height: 50px;
+      padding: 12px;
+      font-size: 16px;
+      line-height: 1.5;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      overflow: auto;
+      box-sizing: border-box;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+#disclaimer {
+    font-size: 15px;
+}
+
+#otherbox {
+    width: 300px;
+}
+
+.singleline {
+    width: 100px; 
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+#name {
+    width: 400px; 
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+#dinput {
+    width: 600px; 
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.yourmom {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+}
