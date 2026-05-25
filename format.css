@@ -38,9 +38,9 @@
     font: inherit; /* ensures same font as document */
     color: black;
   }
-    input::placeholder {
-    color: transparent; /* hides placeholder text */
-    opacity: 0;
+  input:placeholder-shown::placeholder {
+    color: transparent;
+  }
   }
   button {
     display: none ; 
