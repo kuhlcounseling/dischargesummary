@@ -41,7 +41,7 @@
   input:placeholder-shown::placeholder {
     color: transparent;
   }
-  }
+  
   button {
     display: none ; 
   }
