@@ -38,8 +38,10 @@
     font: inherit; /* ensures same font as document */
     color: black;
   }
-  input:placeholder-shown::placeholder {
-    color: transparent;
+  input::placeholder,
+  textarea::placeholder {
+    color: transparent !important;
+    opacity: 0 !important;
   }
   
   button {
